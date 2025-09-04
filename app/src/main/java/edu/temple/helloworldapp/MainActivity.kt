@@ -1,6 +1,8 @@
 package edu.temple.helloworldapp
 
 import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -12,5 +14,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // START WRITING HERE
+        findViewById<Button>(R.id.button).setOnClickListener {
+            findViewById<TextView>(R.id.textView).text = "You clicked the button?!"
+        }
     }
 }
